@@ -9,7 +9,7 @@ function App() {
 console.log(face)
 
   function flipCoin(){
-    const newFlipCoin= Math.random() >0.7 ?"kok": "pil"
+    const newFlipCoin= Math.random() >0.5 ?"kok": "pil"
     if (newFlipCoin === 'kok') setisKok(isKok +1)
     if (newFlipCoin === 'pil') setisPil(isPil +1)
     
@@ -23,7 +23,10 @@ console.log(face)
   return (
     <div className="App">
 
-      <h1>{face}</h1>
+      <h1 className="coinImage">
+<img src={face ==="kok"?"https://previews.123rf.com/images/henningmarquardt/henningmarquardt1702/henningmarquardt170200105/71105677-100-albanian-lek-coin-2000-obverse-isolated-on-white-background.jpg":"https://i.ebayimg.com/images/g/TQYAAOSwg1ljvIcq/s-l1200.jpg"}  />
+
+      </h1>
 <h3 >Kok: {isKok}</h3>
 <h3>Pil: {isPil}</h3>
 
